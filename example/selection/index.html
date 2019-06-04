@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selection Example</title>
+    <style>
+        div[contenteditable=true]{
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            padding: 10px;
+            float: left;
+        }
+        [contenteditable=true]:empty:before {
+            content: "input text...";
+            display: block; /* For Firefox */
+            color: gray;
+        }
+        #table-wrapper{
+            float: left;
+            margin-left: 30px;
+        }
+        table, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            width: 400px;
+        }
+        tr > td:first-child, td:last-child{
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <div contenteditable="true"></div>
+    <div id="table-wrapper">
+        <table>
+                <tr>
+                    <td></td>
+                    <td>TEXT</td>
+                    <td>OFFSET</td>
+                </tr>
+                <tr>
+                    <td>BASE</td>
+                    <td id='base-text'></td>
+                    <td id='base-offset'></td>
+                </tr>
+                <tr>
+                    <td>EXTENT</td>
+                    <td id='extent-text'></td>
+                    <td id='extent-offset'></td>
+                </tr>
+                <tr>
+                    <td>SELECTION</td>
+                    <td id='selection-text'></td>
+                    <td id='selection-offset'></td>
+                </tr>
+            </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
