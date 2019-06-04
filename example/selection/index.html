@@ -13,7 +13,7 @@
             padding: 10px;
             float: left;
         }
-        [contenteditable=true] div:empty:before {
+        [contenteditable=true]:empty:before, [contenteditable=true] div:first-child:empty:before {
             content: "input text...";
             display: block;
             color: gray;
