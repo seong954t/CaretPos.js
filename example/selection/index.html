@@ -26,6 +26,9 @@
             border: 1px solid black;
             border-collapse: collapse;
         }
+        table tr:first-child{
+            text-align: center;
+        }
         td{
             width: 400px;
         }
@@ -40,27 +43,27 @@
     <div contenteditable="true"></div>
     <div id="table-wrapper">
         <table>
-                <tr>
-                    <td></td>
-                    <td>TEXT</td>
-                    <td>OFFSET</td>
-                </tr>
-                <tr>
-                    <td>BASE</td>
-                    <td id='base-text'></td>
-                    <td id='base-offset'></td>
-                </tr>
-                <tr>
-                    <td>EXTENT</td>
-                    <td id='extent-text'></td>
-                    <td id='extent-offset'></td>
-                </tr>
-                <tr>
-                    <td>SELECTION</td>
-                    <td id='selection-text'></td>
-                    <td id='selection-offset'></td>
-                </tr>
-            </table>
+            <tr>
+                <td></td>
+                <td>TEXT</td>
+                <td>OFFSET</td>
+            </tr>
+            <tr>
+                <td>BASE</td>
+                <td id='base-text'></td>
+                <td id='base-offset'></td>
+            </tr>
+            <tr>
+                <td>EXTENT</td>
+                <td id='extent-text'></td>
+                <td id='extent-offset'></td>
+            </tr>
+            <tr>
+                <td>SELECTION</td>
+                <td id='selection-text'></td>
+                <td id='selection-offset'></td>
+            </tr>
+        </table>
     </div>
     <script src="./main.js"></script>
 </body>
