@@ -13,9 +13,9 @@
             padding: 10px;
             float: left;
         }
-        [contenteditable=true]:empty:before {
+        [contenteditable=true] div:empty:before {
             content: "input text...";
-            display: block; /* For Firefox */
+            display: block;
             color: gray;
         }
         #table-wrapper{
@@ -54,10 +54,20 @@
                 <td id='base-offset'></td>
             </tr>
             <tr>
+                <td>ANCHOR</td>
+                <td id='anchor-text'></td>
+                <td id='anchor-offset'></td>
+            </tr>
+            <tr>
                 <td>EXTENT</td>
                 <td id='extent-text'></td>
                 <td id='extent-offset'></td>
             </tr>
+            <tr>
+                <td>FOCUS</td>
+                <td id='focus-text'></td>
+                <td id='focus-offset'></td>
+            </tr>    
             <tr>
                 <td>SELECTION</td>
                 <td id='selection-text'></td>
