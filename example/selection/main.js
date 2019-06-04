@@ -47,10 +47,8 @@ function setSelectionInfo(selection){
 
 function addDIVEmptyFirstLine(){
     const editor = document.querySelector('div[contenteditable=true]');
-    if(editor.innerHTML === '' || document.querySelector('div[contenteditable=true]').childNodes[0].tagName === 'BR'){
-        if(isIEBrowser()){
-            editor.innerHTML = '<p></p>';
-        }else{
+    if(editor.innerText === '' || editor.childNodes[0].tagName === 'BR'){
+        if(!isIEBrowser()){
             editor.innerHTML = '<div></div>';
         }
     }
