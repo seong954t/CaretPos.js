@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selection Example</title>
+    <style>
+        div[contenteditable=true]{
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            padding: 10px;
+            float: left;
+            overflow-y: scroll;
+        }
+        [contenteditable=true]:empty:before, [contenteditable=true] div:first-child:empty:before {
+            content: "input text...";
+            display: block;
+            color: gray;
+        }
+        #table-wrapper{
+            float: left;
+            margin-left: 30px;
+        }
+        table, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table tr:first-child{
+            text-align: center;
+        }
+        td{
+            width: 400px;
+        }
+        tr > td:first-child, td:last-child{
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <div contenteditable="true"></div>
+    <div id="table-wrapper">
+        <table>
+            <tr>
+                <td></td>
+                <td>TEXT</td>
+                <td>OFFSET</td>
+            </tr>
+            <tr>
+                <td>commonAncestorContainer</td>
+                <td id='common-text'></td>
+                <td id='common-offset'></td>
+            </tr>
+            <tr>
+                <td>StartContainer</td>
+                <td id='start-text'></td>
+                <td id='start-offset'></td>
+            </tr>
+            <tr>
+                <td>EndContainer</td>
+                <td id='end-text'></td>
+                <td id='end-offset'></td>
+            </tr>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
