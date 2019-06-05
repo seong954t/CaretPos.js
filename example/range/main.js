@@ -9,12 +9,12 @@ window.onload = function(){
 
 function setInfo(){
     const range = window.getSelection().getRangeAt(0);
-    setBaseInfo(range);
+    setCommonAncestorInfo(range);
     setStartInfo(range);
     setEndInfo(range);
 }
 
-function setBaseInfo(range){
+function setCommonAncestorInfo(range){
     const commonAncestorContainer = range.commonAncestorContainer;
     if(commonAncestorContainer.nodeType === Node.ELEMENT_NODE){
         document.querySelector('#common-text').innerText = commonAncestorContainer.innerText;
