@@ -12,5 +12,5 @@
 | extentOffset | 끝 노드에서 Caret의 Offset(위치) |
 | isCollapsed | Caret의 시작과 끝 동일 여부 |
 
-# window.getSelection() 이미지
+# window.getSelection() 이미지 예제
 ![caret_img](./img1.png)
