@@ -11,3 +11,6 @@
 | --- | --- |
 | setStart | 시작 노드와 Offset 정보를 통해 Caret의 시작 지점을 설정 |
 | setEnd | 끝 노드와 Offset 정보를 통해 Caret의 끝 지점을 설정 |
+
+# Range 예제 이미지
+![create_range_img](./img1.png)
