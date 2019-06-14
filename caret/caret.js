@@ -40,15 +40,15 @@
         visualizationEditor = element;
     }
 
-    function createVisualizationCaret(){
+    function createVisualizationCaret(key, name, color){
 
     }
 
-    function removeVisualizationCaret(){
+    function removeVisualizationCaret(key){
 
     }
 
-    function drawVisualizationCaret(){
+    function drawVisualizationCaret(key, start, end){
 
     }
 
