@@ -60,7 +60,7 @@
     }
 
     const caret = {
-        initialize: initialize,
+        initialize: visualizationInitialize,
         position: caretPosition,
         visualization: visualization
     };
