@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selection Example</title>
+    <style>
+        div[contenteditable=true], #content-mirror{
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            padding: 10px;
+            overflow-y: scroll;
+            overflow-x: inherit;
+            word-break: break-all;
+        }
+        #content-mirror{
+            margin-top: 50px;
+            display: inline-block;
+        }
+        [contenteditable=true]:empty:before, [contenteditable=true] div:first-child:empty:before {
+            content: "input text...";
+            display: block;
+            color: gray;
+        }
+        .text-node-wrapper{
+            border: 0.1px solid black;
+            border-collapse: collapse;
+        }
+        #table-wrapper{
+            display: inline-block;
+        }
+        #caret-table, #caret-table tr, #caret-table td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        #caret-table tr:first-child{
+            text-align: center;
+        }
+        #caret-table td{
+            width: 400px;
+        }
+        #caret-table tr > td:first-child{
+            width: 150px;
+            text-align: center;
+        }
+        #mv-caret-btn{
+            float: right;
+            margin-top: 10px;
+        }
+        #start-offset, #end-offset{
+            width: 99%;
+        }
+        #err-msg{
+            width: 450px;
+            height: 21px;
+            display: inline-block;
+            margin-top: 10px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div contenteditable='true'>
+        <h1>SET CARET RANGE EXAMPLE</h1>
+        <ol>
+            <li>set start container with left click</li>
+            <li>set start offset</li>
+            <li>set end container with right click</li>
+            <li>set end offset</li>
+            <li>click move caret button</li>
+        </ol>
+        <table>
+            <tr>
+                <td>ACTION</td>
+                <td>RESULT</td>
+            </tr>
+            <tr>
+                <td>element left click</td>
+                <td>set start container</td>
+            </tr>
+            <tr>
+                <td>element right click</td>
+                <td>set end container</td>
+            </tr>
+        </table>
+        you can move caret!!!
+    </div>
+    <div contenteditable='false' id='content-mirror'></div>
+    <div id="table-wrapper">
+        <table id='caret-table'>
+            <tr>
+                <td></td>
+                <td>VALUE</td>
+            </tr>
+            <tr>
+                <td>StartContainer</td>
+                <td id='start-container-text'></td>
+            </tr>
+            <tr>
+                <td>StartOffset</td>
+                <td><input id='start-offset' type='number' value='0'></td>
+            </tr>
+            <tr>
+                <td>EndContainer</td>
+                <td id='end-container-text'></td>
+            </tr>
+            <tr>
+                <td>EndOffset</td>
+                <td><input id='end-offset' type='number' value='0'></td>
+            </tr>
+        </table>
+        <div id='err-msg'></div>
+        <button id='mv-caret-btn'>MOVE CARET</button>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
