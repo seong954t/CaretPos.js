@@ -109,7 +109,7 @@
     }
 
     function getLineNodeList(){
-        const lineNodeList = Array.prototype.slice.call(positionEditor.childNodes).filter(childNode => !(childNode.nodeType === Node.TEXT_NODE && childNode.textContent.includes('\n')));
+        const lineNodeList = Array.prototype.slice.call(positionEditor.childNodes).filter(childNode => !isTextNodeWithLineBreak(childNode));
         let newLineNodeList = [];
 
         lineNodeList.forEach(function(lineNode){
@@ -172,6 +172,10 @@
 
     function isActiveElement(element){
         return document.activeElement === element;
+    }
+    
+    function isTextNodeWithLineBreak(node){
+        return node.nodeType === Node.TEXT_NODE && node.textContent.includes('\n');
     }
     
     if (typeof define === 'function' && define.amd) {
