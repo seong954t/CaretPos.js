@@ -166,6 +166,10 @@
         visualization: visualization
     };
 
+    function isActiveElement(element){
+        return document.activeElement === element;
+    }
+    
     if (typeof define === 'function' && define.amd) {
         define(function() {
             return caret;
