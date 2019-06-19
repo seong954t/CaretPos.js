@@ -12,12 +12,16 @@
     */
     let positionEditor;
     const INNER_LINE_NODE_NAMES = ['LI', 'TH', 'TD'];
+    const ERROR_CARET_POSITION = [-1, -1];
 
     function caretInitialize(element){
         positionEditor = element;
     }
 
     function getStartAndEndCaretPositions(){
+        if(!isActiveElement(positionEditor)){
+            return ERROR_CARET_POSITION;
+        }
         const selection = window.getSelection();
         const anchorNode = selection.anchorNode;
         const anchorOffset = selection.anchorOffset;
