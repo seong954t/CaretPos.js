@@ -109,7 +109,7 @@
     }
 
     function getLineNodeList(){
-        const lineNodeList = Array.prototype.slice.call(positionEditor.childNodes).filter(childNode => !isTextNodeWithLineBreak(childNode));
+        const lineNodeList = elementList2ArrayList(positionEditor.childNodes).filter(childNode => !isTextNodeWithLineBreak(childNode));
         let newLineNodeList = [];
 
         lineNodeList.forEach(function(lineNode){
@@ -123,7 +123,7 @@
 
         return newLineNodeList;
     }
-
+    
     function setStartAndEndCaretPositions(start, end){
 
     }
@@ -176,6 +176,10 @@
     
     function isTextNodeWithLineBreak(node){
         return node.nodeType === Node.TEXT_NODE && node.textContent.includes('\n');
+    }
+    
+    function elementList2ArrayList(elementList){
+        return Array.prototype.slice.call(elementList);
     }
     
     if (typeof define === 'function' && define.amd) {
