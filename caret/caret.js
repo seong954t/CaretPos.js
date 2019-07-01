@@ -165,7 +165,6 @@
     }
 
     const caret = {
-        initialize: visualizationInitialize,
         position: caretPosition,
         visualization: visualization
     };
