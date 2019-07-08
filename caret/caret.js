@@ -1,5 +1,5 @@
 /**
- * Hangul.js
+ * CaretPos.js
  * https://github.com/seong954t/CaretPos.js
  *
  * Copyright 2019, Seungtae Kim
